@@ -506,9 +506,7 @@ static uint8_t USBD_CDC_Init(USBD_HandleTypeDef *pdev, uint8_t cfgidx)
   /* Open Command IN EP */
   (void)USBD_LL_OpenEP(pdev, CDC_CMD_EP, USBD_EP_TYPE_INTR, CDC_CMD_PACKET_SIZE);
   pdev->ep_in[CDC_CMD_EP & 0xFU].is_used = 1U;
-  /* USER CODE BEGIN WRITE */
   memset(pdev->pClassData,0,sizeof(USBD_CDC_HandleTypeDef)); // THIS LINE WAS ADDED
-  /* USER CODE END WRITE */
   /* Init  physical Interface components */
   ((USBD_CDC_ItfTypeDef *)pdev->pUserData)->Init();
 

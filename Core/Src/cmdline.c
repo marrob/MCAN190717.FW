@@ -49,7 +49,7 @@ void CmdLineMainMenu(char *request, char* response)
 //  sscanf(request, "%s", cmd);
 //  DeviceDbgLog("%s", request);
 
-   char strtmp[APP_TX_DATA_SIZE/4];
+//   char strtmp[APP_TX_DATA_SIZE/4];
    char cmd[APP_TX_DATA_SIZE/4];
    char cmdtmp[APP_TX_DATA_SIZE/4];
 
@@ -74,7 +74,7 @@ void CmdLineMainMenu(char *request, char* response)
   }
   else if(!strcmp(cmd, "*UID?"))
   {
-    sprintf(response, "SN:%4X%4X%4X",HAL_GetUIDw0(),HAL_GetUIDw1(),HAL_GetUIDw2());
+    sprintf(response, "SN:%4lX%4lX%4lX",HAL_GetUIDw0(),HAL_GetUIDw1(),HAL_GetUIDw2());
   }
   else if(!strcmp(cmd, "VCELLS?"))
   {
@@ -110,13 +110,28 @@ void CmdLineMainMenu(char *request, char* response)
       CanDbEngSendMessage(&Device.CanDbEng, MSG_ASIC_REGISTER_MAIN);
       strcpy(response, "OK");
     }
-
+  }
+  else if (!strcmp(cmd, "ALTMUX"))
+  {
+    Device.BMS.AISC_REG_ID = 0x51;
+    Device.BMS.ASIC_REG_DATA = 0x0008;
+    Device.BMS.ASIC_R_W = 1;
+    CanDbEngSendMessage(&Device.CanDbEng, MSG_ASIC_REGISTER_MAIN);
+    strcpy(response, "OK");
+  }
+  else if (!strcmp(cmd, "HVMUX"))
+  {
+    Device.BMS.AISC_REG_ID = 0x51;
+    Device.BMS.ASIC_REG_DATA = 0x0000;
+    Device.BMS.ASIC_R_W = 1;
+    CanDbEngSendMessage(&Device.CanDbEng, MSG_ASIC_REGISTER_MAIN);
+    strcpy(response, "OK");
   }
   else
   {
     sprintf(response, CMDLINE_UNKNOWN_COMMAND_ERROR, cmd);
     cmd[0] = 0;
-    strtmp[0] = 0;
+//    strtmp[0] = 0;
     cmdtmp[0] = 0;
   } 
 
