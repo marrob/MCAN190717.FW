@@ -15,6 +15,9 @@
 #define MSG_ASIC0_DATA_1_MAIN           0x710
 #define MSG_ASIC0_DATA_2_MAIN           0x711
 #define MSG_ASIC0_DATA_3_MAIN           0x712
+#define MSG_ASIC1_DATA_1_MAIN           0x713
+#define MSG_ASIC1_DATA_2_MAIN           0x714
+#define MSG_ASIC1_DATA_3_MAIN           0x715
 #define MSG_ASIC_VCELL_MAIN             0x73D
 #define MSG_LOGICAL_OUTPUTS_MAIN        0x7CF
 #define MSG_ASIC_REGISTER_MAIN          0x73C
@@ -29,4 +32,4 @@ int CanDbGetMessagesCount(void);
 int CanDbGetSignalsCount(void);
 
 #endif //_CANDB__H_
-/************************ (C) COPYRIGHT Konvolúció **********END OF FILE****/
+/************************ (C) COPYRIGHT Konvolï¿½ciï¿½ **********END OF FILE****/

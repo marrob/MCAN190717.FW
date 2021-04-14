@@ -118,6 +118,19 @@ typedef struct _DeviceTypeDef
     uint8_t AISC_REG_ID;
     uint16_t ASIC_REG_DATA;
     uint8_t ASIC_R_W;
+
+    double ASIC1_CELL1;
+    double ASIC1_CELL2;
+    double ASIC1_CELL3;
+    double ASIC1_CELL4;
+    double ASIC1_CELL5;
+    double ASIC1_CELL6;
+    double ASIC1_CELL7;
+    double ASIC1_CELL8;
+    double ASIC1_CELL9;
+    double ASIC1_CELL10;
+    double ASIC1_CELL11;
+    double ASIC1_CELL12;
   }BMS;
 }DeviceTypeDef;
 /* USER CODE END ET */

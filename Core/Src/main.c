@@ -108,16 +108,16 @@ void TestMsgSenderTask(void)
 void TestVcpTask(void)
 {
   static int32_t timestamp;
-  static uint64_t counter = 0;
+  static int16_t counter = 0;
+  char test_sentence[80];
   if(HAL_GetTick() - timestamp >= 1000)
   {
     timestamp = HAL_GetTick();
 
     if(Device.UART.TxRequest == 0)
     {
-      char test_sentence[80] = {"Hello World"};
-      sprintf(test_sentence, "%s %lld\r\n", test_sentence,counter++);
 
+      sprintf(test_sentence, "%08d\r\n",counter++);
       strcpy(Device.UART.TxLine,test_sentence);
       Device.UART.TxSize = strlen(test_sentence);
       Device.UART.TxRequest = 1;

@@ -56,6 +56,18 @@ CanDbEngSignalItem_Type CanDbSignals[] =
   { "ASIC_REG_ID",                   MSG_ASIC_REGISTER_MAIN,   &Device.BMS.AISC_REG_ID,                   0,      8,     CANDBENG_UNSIGNED,  1,            0,     "-",   NULL },
   { "ASIC_REG_DATA",                 MSG_ASIC_REGISTER_MAIN,   &Device.BMS.ASIC_REG_DATA,                 16,     16,    CANDBENG_UNSIGNED,  1,            0,     "-",   NULL },
   { "ASIC_R_W",                      MSG_ASIC_REGISTER_MAIN,   &Device.BMS.ASIC_R_W,                      31,     1,     CANDBENG_UNSIGNED,  1,            0,     "-",   NULL },
+  { "ASIC1_CELL1",                   MSG_ASIC1_DATA_1_MAIN,    &Device.BMS.ASIC1_CELL1,                   8,      16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL2",                   MSG_ASIC1_DATA_1_MAIN,    &Device.BMS.ASIC1_CELL2,                   24,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL3",                   MSG_ASIC1_DATA_1_MAIN,    &Device.BMS.ASIC1_CELL3,                   40,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL4",                   MSG_ASIC1_DATA_1_MAIN,    &Device.BMS.ASIC1_CELL4,                   56,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL5",                   MSG_ASIC1_DATA_2_MAIN,    &Device.BMS.ASIC1_CELL5,                   8,      16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL6",                   MSG_ASIC1_DATA_2_MAIN,    &Device.BMS.ASIC1_CELL6,                   24,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL7",                   MSG_ASIC1_DATA_2_MAIN,    &Device.BMS.ASIC1_CELL7,                   40,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL8",                   MSG_ASIC1_DATA_2_MAIN,    &Device.BMS.ASIC1_CELL8,                   56,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL9",                   MSG_ASIC1_DATA_3_MAIN,    &Device.BMS.ASIC1_CELL9,                   8,      16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL10",                  MSG_ASIC1_DATA_3_MAIN,    &Device.BMS.ASIC1_CELL10,                  24,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL11",                  MSG_ASIC1_DATA_3_MAIN,    &Device.BMS.ASIC1_CELL11,                  40,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
+  { "ASIC1_CELL12",                  MSG_ASIC1_DATA_3_MAIN,    &Device.BMS.ASIC1_CELL12,                  56,     16,    CANDBENG_FLOAT,     0.0009765625, 0,     "V",   NULL },
 };
 
 int CanDbGetMessagesCount(void)
