@@ -12,6 +12,10 @@ CanDbEngMessageItem_Type CanDbMessages[] =
   { "ASIC0_DATA_1_MAIN",     MSG_ASIC0_DATA_1_MAIN,    8,   0,   0,        0,        NULL               },
   { "ASIC0_DATA_2_MAIN",     MSG_ASIC0_DATA_2_MAIN,    8,   0,   0,        0,        NULL               },
   { "ASIC0_DATA_3_MAIN",     MSG_ASIC0_DATA_3_MAIN,    8,   0,   0,        0,        NULL               },
+  { "ASIC1_DATA_1_MAIN",     MSG_ASIC1_DATA_1_MAIN,    8,   0,   0,        0,        NULL               },
+  { "ASIC1_DATA_2_MAIN",     MSG_ASIC1_DATA_2_MAIN,    8,   0,   0,        0,        NULL               },
+  { "ASIC1_DATA_3_MAIN",     MSG_ASIC1_DATA_3_MAIN,    8,   0,   0,        0,        NULL               },
+
 
   /*** Tx by PC ***/
   { "HEVC_RN4",              MSG_HEVC_RN4,             8,   1,   /*1*/1,   100,      NULL               }, /*Message HEVC_RN4 transmitted on CAN ETS from HEVC*/
